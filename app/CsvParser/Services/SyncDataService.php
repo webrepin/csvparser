@@ -60,6 +60,7 @@ class SyncDataService implements SyncDataServiceInterface
             throw new \Exception('Failed to open file');
         }
 
+        //to flush all temp data
         $this->userTempData->newQuery()->truncate();
 
         $row = 1;
@@ -77,9 +78,10 @@ class SyncDataService implements SyncDataServiceInterface
             $row ++;
         }
 
+        // truncate all duplicates in temp data
         $this->filterDuplicates();
 
-        // able to be in transaction
+        // @todo able to be in transaction
         /** @var UserTempData $tempRow */
         while ($tempRow = $this->userTempData->newQuery()->first()) {
             $tempData = $tempRow->getAttributes();
@@ -157,6 +159,7 @@ class SyncDataService implements SyncDataServiceInterface
         $validateErrors = $this->validateRow($data);
         if ($validateErrors) {
             $this->reportsManager->putDataToReportFile(
+                //sending report to file like {filename-validation-failed.csv}
                 new ReportValidationFailed($data, $validateErrors)
             );
             return false;
@@ -174,6 +177,7 @@ class SyncDataService implements SyncDataServiceInterface
         } else {
             $this->createNew($data);
         }
+        //
         $this->softDeletes();
         return true;
 
