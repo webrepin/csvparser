@@ -25,15 +25,15 @@ class ReportRestored implements ReportingInterface
     }
 
     /**
-     * @return array
+     * @inheritdoc
      */
-    public function ReportInfo()
+    public function ReportInfo():array
     {
         return $this->data;
     }
 
     /**
-     *
+     * @inheritdoc
      */
     public function ReportType(): string
     {

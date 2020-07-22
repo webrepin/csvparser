@@ -12,11 +12,11 @@ interface ReportingInterface
      * Get report info from report instance
      * @return mixed
      */
-    public function ReportInfo();
+    public function ReportInfo(): array;
 
     /**
      * Get report type
      * @return string
      */
-    public function ReportType(): string ;
+    public function ReportType(): string;
 }

@@ -18,7 +18,6 @@ class ReportCreated implements ReportingInterface
 
     /**
      * ReportValidationFailed constructor.
-     * @param array $oldData
      * @param array $data
      */
     public function __construct(array $data)
@@ -27,15 +26,15 @@ class ReportCreated implements ReportingInterface
     }
 
     /**
-     * @return array
+     * @inheritdoc
      */
-    public function ReportInfo()
+    public function ReportInfo(): array
     {
         return $this->data;
     }
 
     /**
-     *
+     * @inheritdoc
      */
     public function ReportType(): string
     {

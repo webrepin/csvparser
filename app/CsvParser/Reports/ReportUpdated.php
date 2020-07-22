@@ -26,15 +26,15 @@ class ReportUpdated implements ReportingInterface
     }
 
     /**
-     * @return array
+     * @inheritdoc
      */
-    public function ReportInfo()
+    public function ReportInfo(): array
     {
         return $this->changes;
     }
 
     /**
-     *
+     * @inheritdoc
      */
     public function ReportType(): string
     {

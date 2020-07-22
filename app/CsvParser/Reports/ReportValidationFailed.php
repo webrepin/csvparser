@@ -30,15 +30,15 @@ class ReportValidationFailed implements ReportingInterface
     }
 
     /**
-     * @return array
+     * @inheritdoc
      */
-    public function ReportInfo()
+    public function ReportInfo(): array
     {
         return $this->data;
     }
 
     /**
-     * @return string
+     * @inheritdoc
      */
     public function ReportType(): string
     {
