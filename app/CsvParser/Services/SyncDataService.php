@@ -89,6 +89,8 @@ class SyncDataService implements SyncDataServiceInterface
             $tempRow->delete();
         }
 
+        $this->softDeletes();
+
         fclose($handle);
     }
 
@@ -177,8 +179,6 @@ class SyncDataService implements SyncDataServiceInterface
         } else {
             $this->createNew($data);
         }
-        //
-        $this->softDeletes();
         return true;
 
     }
