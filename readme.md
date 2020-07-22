@@ -6,6 +6,10 @@ How to install:
 
 ``php composer install``
 
-Enter by command 
-``app\CsvParser\Console\Commands\ParseCsvCommand``
+Module in
 
+``App\CsvParser``
+
+Up by command 
+
+``App\CsvParser\Console\Commands\ParseCsvCommand``
