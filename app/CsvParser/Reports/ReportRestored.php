@@ -15,8 +15,7 @@ class ReportRestored implements ReportingInterface
     protected $data;
 
     /**
-     * ReportValidationFailed constructor.
-     * @param array $oldData
+     * ReportRestored constructor.
      * @param array $data
      */
     public function __construct(array $data)

@@ -15,7 +15,7 @@ class ReportUpdated implements ReportingInterface
     protected $changes;
 
     /**
-     * ReportValidationFailed constructor.
+     * ReportUpdated constructor.
      * @param array $oldData
      * @param array $data
      */

@@ -17,7 +17,7 @@ class ReportCreated implements ReportingInterface
     protected $data;
 
     /**
-     * ReportValidationFailed constructor.
+     * ReportCreated constructor.
      * @param array $data
      */
     public function __construct(array $data)
