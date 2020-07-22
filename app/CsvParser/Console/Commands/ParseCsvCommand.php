@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 /**
  * The command is synchronize CVS data file with DataBase storage data
- * throw the service
+ * throw the service SyncDataServiceInterface
  *
  * Class ParseCsvCommand
  * @package App\CsvParser\Console\Commands
